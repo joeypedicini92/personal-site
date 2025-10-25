@@ -12,7 +12,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-primary-900 dark:via-primary-800 dark:to-accent-900 transition-theme">
         <motion.div
@@ -58,14 +58,14 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 gradient-text"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 gradient-text leading-relaxed py-4"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -79,7 +79,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Technologist • Coach • Philosopher
+            Technologist • Coach • Mentor
           </motion.p>
 
           <motion.div

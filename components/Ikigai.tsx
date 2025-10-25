@@ -13,9 +13,9 @@ export default function Ikigai() {
       title: 'What I Love',
       color: 'from-red-400 to-pink-500',
       items: [
-        'Guiding people toward clarity and confidence',
-        'Building meaningful software',
-        'Exploring human nature, purpose, and faith'
+        'Mentorship and coaching through MentorCruise',
+        'Startup development and consulting via CodeCompass',
+        'Guiding people toward clarity and confidence'
       ],
       position: 'top-left'
     },
@@ -76,7 +76,7 @@ export default function Ikigai() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 gradient-text">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 gradient-text leading-relaxed py-4">
             My Ikigai
           </h2>
           <p className="text-lg md:text-xl text-primary-600 dark:text-primary-300 max-w-3xl mx-auto font-light">

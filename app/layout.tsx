@@ -16,10 +16,10 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Joey Pedicini - Technologist • Coach • Philosopher',
+  title: 'Joey Pedicini - Technologist • Coach • Mentor',
   description: 'Building better humans through better software. Personal website of Joey Pedicini, a fractional CTO, software consultant, and leadership coach who believes in human-driven development.',
   keywords: ['Joey Pedicini', 'Fractional CTO', 'Software Consultant', 'Leadership Coach', 'Human Driven Development', 'CodeCompass', 'Technology', 'Philosophy'],
-  authors: [{ name: 'Joey Pedicini', url: 'https://linkedin.com/in/joeypedicini' }],
+  authors: [{ name: 'Joey Pedicini', url: 'https://www.linkedin.com/in/joey-p-a3343924/' }],
   creator: 'Joey Pedicini',
   icons: {
     icon: '/favicon.svg',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://joeypedicini.com',
-    title: 'Joey Pedicini - Technologist • Coach • Philosopher',
+    title: 'Joey Pedicini - Technologist • Coach • Mentor',
     description: 'Building better humans through better software.',
     siteName: 'Joey Pedicini',
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Joey Pedicini - Technologist • Coach • Philosopher',
+    title: 'Joey Pedicini - Technologist • Coach • Mentor',
     description: 'Building better humans through better software.',
     images: ['/og-image.jpg'],
   },

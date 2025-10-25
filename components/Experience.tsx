@@ -2,12 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Building2, Zap, Compass, Heart } from 'lucide-react'
+import ContactModal from './ContactModal'
 
 export default function Experience() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const experiences = [
     {
@@ -29,13 +31,13 @@ export default function Experience() {
       achievement: 'Streamlined admissions for 50+ institutions'
     },
     {
-      title: 'CodeCompass',
-      subtitle: 'Developer Coaching',
-      description: 'Mentoring developers and startups through technical challenges and career growth, doing what I love most.',
+      title: 'CodeCompass & MentorCruise',
+      subtitle: 'Coaching & Consulting',
+      description: 'MentorCruise: Individual and team coaching for developers and leaders. CodeCompass: Startup development and technical consulting.',
       icon: Compass,
       color: 'from-purple-500 to-violet-500',
       category: 'What I Love',
-      achievement: 'Guided 100+ developers to success'
+      achievement: 'Mentored 100+ developers and guided multiple startups'
     },
     {
       title: 'Human Driven Development',
@@ -58,7 +60,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 gradient-text">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 gradient-text leading-relaxed py-4">
             Experience Highlights
           </h2>
           <p className="text-lg md:text-xl text-primary-600 dark:text-primary-300 max-w-3xl mx-auto font-light">
@@ -139,14 +141,17 @@ export default function Experience() {
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-medium rounded-full hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              const connectSection = document.getElementById('connect')
-              connectSection?.scrollIntoView({ behavior: 'smooth' })
-            }}
+            onClick={() => setIsModalOpen(true)}
           >
             Let&apos;s Work Together
           </motion.button>
         </motion.div>
+
+        {/* Contact Modal */}
+        <ContactModal 
+          isOpen={isModalOpen} 
+          onClose={() => setIsModalOpen(false)} 
+        />
       </div>
     </section>
   )

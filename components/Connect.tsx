@@ -23,7 +23,7 @@ export default function Connect() {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/joeypedicini',
+      url: 'https://www.linkedin.com/in/joey-p-a3343924/',
       icon: Linkedin,
       color: 'from-blue-500 to-blue-600',
       description: 'Professional network and career insights'
@@ -33,21 +33,21 @@ export default function Connect() {
       url: 'https://instagram.com/holistic_cto',
       icon: Instagram,
       color: 'from-pink-500 to-purple-600',
-      description: 'Behind-the-scenes and holistic leadership'
+      description: 'Personal posts about life, philosophy, and growth'
     },
     {
       name: 'YouTube',
       url: 'https://youtube.com/@holistic_cto',
       icon: Youtube,
       color: 'from-red-500 to-red-600',
-      description: 'Technical tutorials and leadership talks'
+      description: 'Personal videos about faith, struggles, and Bible studies'
     },
     {
       name: 'Spotify',
-      url: 'https://open.spotify.com/user/joeypedicini',
+      url: 'https://open.spotify.com/artist/1bygXaDLZHtDGYtCSBzoCR',
       icon: Music,
       color: 'from-green-500 to-green-600',
-      description: 'Curated playlists for deep work'
+      description: 'Original music I&apos;ve created and composed'
     }
   ]
 
@@ -64,7 +64,7 @@ export default function Connect() {
       url: 'https://codecompass.org',
       icon: Compass,
       color: 'from-cyan-500 to-blue-600',
-      description: 'Developer coaching and technical guidance'
+      description: 'Startup development and technical consulting'
     },
     {
       name: 'Human Driven Development',
@@ -139,7 +139,7 @@ export default function Connect() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 gradient-text">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 gradient-text leading-relaxed py-4">
             Let&apos;s Connect
           </h2>
           <p className="text-lg md:text-xl text-primary-600 dark:text-primary-300 max-w-3xl mx-auto font-light mb-8">
@@ -205,14 +205,17 @@ export default function Connect() {
               Connect with fellow developers, leaders, and human-centered technologists in our Discord community.
             </p>
             
-            <motion.button
+            <motion.a
+              href="https://discord.gg/RBZWcWvV"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <MessageCircle className="w-4 h-4 mr-2" />
-              Coming Soon
-            </motion.button>
+              Join Discord
+            </motion.a>
           </div>
         </motion.div>
 
