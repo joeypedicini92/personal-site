@@ -12,50 +12,77 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background gradient animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-primary-900 dark:via-primary-800 dark:to-accent-900 transition-theme">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Enhanced background with animated mesh gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900/20 dark:to-pink-900/20 transition-all duration-700">
+        {/* Animated gradient mesh */}
         <motion.div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-40"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.4) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.4) 0%, transparent 50%), radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
             ],
           }}
           transition={{
-            duration: 8,
+            duration: 12,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
         />
+        
+        {/* Geometric pattern overlay */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent dark:via-white/10 transform rotate-12"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent dark:via-white/10 transform -rotate-12"></div>
+        </div>
       </div>
 
-      {/* Floating particles */}
+      {/* Enhanced floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-accent-400/20 rounded-full"
+            className={`absolute rounded-full ${
+              i % 3 === 0 ? 'w-3 h-3 bg-blue-400/30' :
+              i % 3 === 1 ? 'w-2 h-2 bg-purple-400/30' :
+              'w-4 h-4 bg-pink-400/20'
+            }`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
+              y: [0, -40, 0],
+              x: [0, Math.random() * 20 - 10, 0],
+              opacity: [0.2, 0.8, 0.2],
+              scale: [1, 1.2, 1],
             }}
             transition={{
-              duration: 4 + Math.random() * 2,
+              duration: 5 + Math.random() * 3,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: Math.random() * 3,
               ease: 'easeInOut',
             }}
           />
         ))}
       </div>
+
+      {/* Animated banner strip */}
+      <motion.div
+        className="absolute top-1/4 left-0 w-full h-32 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 dark:from-blue-400/20 dark:via-purple-400/20 dark:to-pink-400/20 transform -rotate-6 -translate-y-16"
+        animate={{
+          x: ['-100%', '100%'],
+          opacity: [0, 0.7, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
 
       {/* Main content */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto py-20">

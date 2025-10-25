@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Link from 'next/link'
 
 export default function Philosophy() {
   const ref = useRef(null)
@@ -15,7 +16,7 @@ export default function Philosophy() {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-b from-white to-primary-50 dark:from-primary-800 dark:to-primary-900 transition-theme">
+    <section id="philosophy" className="section-padding bg-gradient-to-b from-white to-primary-50 dark:from-primary-800 dark:to-primary-900 transition-theme">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -144,6 +145,26 @@ export default function Philosophy() {
                 </p>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Human Driven Development CTA */}
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 2.5 }}
+          >
+            <Link
+              href="/human-driven-development"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-full font-medium hover:from-accent-600 hover:to-accent-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>🚀</span>
+              <span>Learn About Human Driven Development</span>
+              <span>→</span>
+            </Link>
+            <p className="text-sm text-primary-600 dark:text-primary-400 mt-4 max-w-md mx-auto">
+              Discover the methodology that puts people first in software development
+            </p>
           </motion.div>
         </div>
       </div>

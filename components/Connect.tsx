@@ -47,7 +47,7 @@ export default function Connect() {
       url: 'https://open.spotify.com/artist/1bygXaDLZHtDGYtCSBzoCR',
       icon: Music,
       color: 'from-green-500 to-green-600',
-      description: 'Original music I&apos;ve created and composed'
+      description: `Original music I've created and composed`
     }
   ]
 

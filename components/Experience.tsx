@@ -51,7 +51,7 @@ export default function Experience() {
   ]
 
   return (
-    <section className="section-padding bg-white dark:bg-primary-800 transition-theme">
+    <section id="experience" className="section-padding bg-white dark:bg-primary-800 transition-theme">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
