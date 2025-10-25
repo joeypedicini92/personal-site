@@ -13,7 +13,8 @@ import {
   Compass,
   Heart,
   Users,
-  BookOpen
+  BookOpen,
+  Mic
 } from 'lucide-react'
 
 export default function Connect() {
@@ -52,6 +53,13 @@ export default function Connect() {
   ]
 
   const platforms = [
+    {
+      name: 'Top Mentor Podcast',
+      url: 'https://www.youtube.com/watch?v=hqZMsnBK3Jc',
+      icon: Mic,
+      color: 'from-purple-500 to-indigo-600',
+      description: 'Featured guest discussing leadership and human-driven development'
+    },
     {
       name: 'MentorCruise',
       url: 'https://mentorcruise.com/mentor/joeypedicini',
@@ -174,7 +182,7 @@ export default function Connect() {
           >
             Platforms & Projects
           </motion.h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {platforms.map((platform, index) => (
               <LinkCard key={platform.name} item={platform} index={index + socialLinks.length} />
             ))}
