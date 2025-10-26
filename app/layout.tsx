@@ -73,7 +73,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} font-sans text-smooth transition-theme`}>
         <ThemeProvider
-          attribute="data-theme"
+          attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange={false}
