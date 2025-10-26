@@ -21,10 +21,11 @@ export default function Home() {
 
       {/* Sections */}
       <Hero />
+      <Philosophy />
       <Ikigai />
       <Experience />
       <CaseStudies />
-      <Philosophy />
+      
       <PhotoGallery />
       <Connect />
     </main>

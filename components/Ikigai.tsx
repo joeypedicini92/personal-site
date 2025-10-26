@@ -13,8 +13,8 @@ export default function Ikigai() {
       title: 'What I Love',
       color: 'from-red-400 to-pink-500',
       items: [
-        'Mentorship and coaching through MentorCruise',
-        'Startup development and consulting via CodeCompass',
+        'Mentorship and coaching',
+        'Startup development and consulting',
         'Guiding people toward clarity and confidence'
       ],
       position: 'top-left'
@@ -35,7 +35,7 @@ export default function Ikigai() {
       items: [
         'Human connection in technology',
         'Ethical, emotionally intelligent engineering',
-        'Leaders who build with integrity and empathy'
+        'Leaders with integrity and empathy'
       ],
       position: 'bottom-left'
     },
