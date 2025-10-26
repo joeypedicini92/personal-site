@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero'
 import Ikigai from '@/components/Ikigai'
 import Experience from '@/components/Experience'
+import CaseStudies from '@/components/CaseStudies'
 import Philosophy from '@/components/Philosophy'
 import PhotoGallery from '@/components/PhotoGallery'
 import Connect from '@/components/Connect'
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <Ikigai />
       <Experience />
+      <CaseStudies />
       <Philosophy />
       <PhotoGallery />
       <Connect />
